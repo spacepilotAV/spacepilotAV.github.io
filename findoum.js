@@ -8,11 +8,15 @@ var a = new Array(0);
 var b;
 
 checkVersion = function () {
-    var agent = window.navigator.userAgent,
+    var agent = window.navigator.userAgent
     start = agent.indexOf( "OS " );
     if( ( agent.indexOf( "iPhone" ) > -1 || agent.indexOf( "iPad" ) > -1 ) && start > -1 ){
-        return agent.substr(start + 3).split(" ")[0].split( "_").join( "." );
+		return agent.substr(start + 3).split(" ")[0].split( "_").join( "." );
     }
+    else {
+		start = agent.indexOf( "OS X " );
+		return agent.substr(start + 5).split(" ")[0].split("_").join( "." ).replace(")","");
+	}
     return 0;
 }
 // thx ngoclt on github gists. modified
