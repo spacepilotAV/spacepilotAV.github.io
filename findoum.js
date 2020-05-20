@@ -39,8 +39,7 @@ if (localStorage.getItem("c") != undefined) {
 			break;
 		}
 	}
-	document.write("[*] refresh = " + localStorage.getItem("refresh"));
-	document.write("[*] OUM = " + localStorage.getItem("c"));
+	alert("[*] refresh = " + localStorage.getItem("refresh") + "\n[*] OUM = " + localStorage.getItem("c"));
 	localStorage.removeItem("c");
 	localStorage.removeItem("d");
 }
