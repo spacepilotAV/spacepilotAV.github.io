@@ -33,6 +33,7 @@ if (localStorage.getItem("c") != undefined) {
 		localStorage.setItem("d", 0);
 	}
 	console.log(localStorage.getItem("c") * 2);
+	document.write("[*] continuing");
 	for (i = Math.log2(localStorage.getItem("c") * 2); i < 32; i++) {
 		localStorage.c = localStorage.getItem("c") * 2;
 		if (findOUMInterval(i) == 1) {
