@@ -49,7 +49,7 @@ if (localStorage.getItem("c") != undefined) {
 			break;
 		}
 	}
-	alert("[*] iOS version is " + checkVersion() + "\n" + [*] refresh = " + localStorage.getItem("refresh") + "\n[*] OUM = " + localStorage.getItem("c"));
+	alert("[*] iOS version is " + checkVersion() + "\n" + "[*] refresh = " + localStorage.getItem("refresh") + "\n[*] OUM = " + localStorage.getItem("c"));
 	localStorage.removeItem("c");
 	localStorage.removeItem("d");
 }
