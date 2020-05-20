@@ -1,0 +1,31 @@
+<html>
+  <body>
+    <h1 onclick="testIt();">click me</h1>
+    <script>
+      function guessOUM(width, height) {
+        // only works in portrait right now
+        if (width == 640 && height == 1136) {
+          return [16777216, 268435456];
+        }
+        else if (width == 750 && height == 1134) {
+          return [33554432, 268435456];
+        }
+        else if (width > 750 && height > 1134) {
+          if (navigator.userAgent.includes("iPad")) {
+            return [67108864, 268435456];
+          else {
+            return [33554432, 268435456];
+          }
+        }
+      }
+      function testIt() {
+        var out = guessOUM(screen.width, screen.height);
+        alert("[*] guessed refresh is " + out[0] + "\nguessed OUM is " + out[1]);
+        alert("if this refreshes, than these values are correct.");
+        var testing = new Array(0);
+        testing[out[0]] = 0;
+        alert("[*] fail. (theoretically. if this refreshes after you press ok the values are correct)" + testing[out[0]]);
+      };
+    </script>
+  </body>
+</html>
