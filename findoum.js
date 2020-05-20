@@ -29,7 +29,7 @@ function findOUM() {
 
 if (localStorage.getItem("c") != undefined) {
 	if (localStorage.getItem("d") != undefined) {
-		alert("refresh = "localStorage.getItem("c") * 2));
+		alert("refresh = " + localStorage.getItem("c") * 2);
 		localStorage.setItem("d", 0);
 	}
 	console.log(localStorage.getItem("c") * 2);
