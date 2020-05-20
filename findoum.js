@@ -7,6 +7,16 @@ var i = 0;
 var a = new Array(0);
 var b;
 
+checkVersion = function () {
+    var agent = window.navigator.userAgent,
+    start = agent.indexOf( ‘OS ‘ );
+    if( ( agent.indexOf( ‘iPhone’ ) > -1 || agent.indexOf( ‘iPad’ ) > -1 ) && start > -1 ){
+        return window.Number( agent.substr( start + 3, 3 ).replace( ‘_’, ’.’ ) );
+    }
+    return 0;
+}
+// thx ngoclt on github gists
+
 function findOUMInterval(i) {
 	a[Math.pow(2,i) - 1] = 0;
 	try {
@@ -39,7 +49,7 @@ if (localStorage.getItem("c") != undefined) {
 			break;
 		}
 	}
-	alert("[*] refresh = " + localStorage.getItem("refresh") + "\n[*] OUM = " + localStorage.getItem("c"));
+	alert("[*] iOS version is " + checkVersion() + "\n" + [*] refresh = " + localStorage.getItem("refresh") + "\n[*] OUM = " + localStorage.getItem("c"));
 	localStorage.removeItem("c");
 	localStorage.removeItem("d");
 }
