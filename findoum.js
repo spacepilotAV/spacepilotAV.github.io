@@ -40,4 +40,5 @@ if (localStorage.getItem("c") != undefined) {
 		}
 	}
 	localStorage.removeItem("c");
+	localStorage.removeItem("d");
 }
