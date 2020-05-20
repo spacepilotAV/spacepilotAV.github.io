@@ -14,7 +14,6 @@ function findOUMInterval(i) {
 		return 0;
 	}
 	catch (e) {
-		alert("error for 2^x x = " + i);
 		return 1;
 	}
 }
@@ -29,7 +28,7 @@ function findOUM() {
 
 if (localStorage.getItem("c") != undefined) {
 	if (localStorage.getItem("d") == undefined) {
-		alert("refresh = " + localStorage.getItem("c"));
+		localStorage.setItem("refresh", localStorage.getItem("c"));
 		localStorage.setItem("d", 0);
 	}
 	console.log(localStorage.getItem("c") * 2);
@@ -40,6 +39,8 @@ if (localStorage.getItem("c") != undefined) {
 			break;
 		}
 	}
+	document.write("[*] refresh = " + localStorage.getItem("refresh"));
+	document.write("[*] OUM = " + localStorage.getItem("c"));
 	localStorage.removeItem("c");
 	localStorage.removeItem("d");
 }
