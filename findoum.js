@@ -1,6 +1,6 @@
 /*
 	findoum.js
-	(c) public domain
+	(c) spv, gplv3
 */
 
 var i = 0;
