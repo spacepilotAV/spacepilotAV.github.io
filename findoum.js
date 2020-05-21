@@ -41,9 +41,9 @@ function findOUM() {
 }
 
 if (localStorage.getItem("count") != undefined) {
-	console.log("[*] found refresh at " + i);
+	console.log("[*] found refresh at " + localStorage.getItem("count"));
 	if (localStorage.getItem("done") == undefined) {
-		console.log("[*] first refresh at " + i);
+		console.log("[*] first refresh at " + localStorage.getItem("count"));
 		localStorage.setItem("refresh", localStorage.getItem("count"));
 		localStorage.setItem("done", 0);
 	}
