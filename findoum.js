@@ -23,7 +23,7 @@ checkVersion = function () {
 function findOUMInterval(i) {
 	OUMArray[Math.pow(2,i) - 1] = 0;
 	try {
-		localStorage.setItem("count") = OUMArray.toString().length;
+		localStorage.setItem("count", OUMArray.toString().length);
 		return 0;
 	}
 	catch (e) {
