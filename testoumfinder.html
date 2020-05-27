@@ -2,15 +2,19 @@
   <body>
     <h1 onclick="testIt();">click me</h1>
     <script>
+      /*
+        this is the original refreshFinder!
+        1134 was a mistake, 1334 is correct. 
+      */
       function guessOUM(width, height) {
         // only works in portrait right now
         if (width == 640 && height == 1136) {
           return [16777216, 268435456];
         }
-        else if (width == 750 && height == 1134) {
+        else if (width == 750 && height == 1334) {
           return [33554432, 268435456];
         }
-        else if (width > 750 && height > 1134) {
+        else if (width > 750 && height > 1334) {
           if (navigator.userAgent.includes("iPad")) {
             return [67108864, 268435456];
           }
